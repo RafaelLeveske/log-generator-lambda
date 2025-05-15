@@ -1,0 +1,22 @@
+{
+  "name": "log-generator-lambda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "offline": "serverless offline start",
+    "build": "tsc -p tsconfig.build.json",
+    "deploy": "npm run build && npx serverless deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.149",
+    "@types/node": "^22.15.18",
+    "serverless": "^4.14.3",
+    "serverless-offline": "^14.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

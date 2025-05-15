@@ -1,0 +1,20 @@
+service: log-generator-lambda
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: us-east-1
+  logRetentionInDays: 3
+
+functions:
+  generateLogs:
+    handler: dist/lambda.generateLogs
+    timeout: 10
+    events:
+      - http:
+          path: logs
+          method: get
+
+plugins:
+  - serverless-offline
