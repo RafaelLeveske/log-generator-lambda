@@ -1,6 +1,6 @@
 # 🔁 Log Generator Lambda
 
-A simple Lambda function responsible for simulating log generation and sending them to **AWS CloudWatch Logs**. These logs are consumed by another function (`log-indexer-lambda`) for indexing into **OpenSearch**.
+A simple Lambda function responsible for simulating log generation and sending them to **AWS CloudWatch Logs**. These logs are consumed by another function ([`log-indexer-lambda`](https://github.com/RafaelLeveske/log-indexer-lambda)) for indexing into **OpenSearch**.
 
 ---
 
@@ -60,7 +60,7 @@ The generated logs will automatically be sent to the AWS logs group:
 /aws/lambda/log-generator-lambda-dev-generateLogs
 ```
 
-These logs will be consumed by the `log-indexer-lambda` function.
+These logs will be consumed by the [`log-indexer-lambda`](https://github.com/RafaelLeveske/log-indexer-lambda) function.
 
 ---
 
@@ -72,4 +72,4 @@ These logs will be consumed by the `log-indexer-lambda` function.
 
 ---
 
-Enjoyed this project? Check out the [`log-indexer-lambda`](https://github.com/seu-usuario/log-indexer-lambda) which complements this solution!
+Enjoyed this project? Check out the [`log-indexer-lambda`](https://github.com/RafaelLeveske/log-indexer-lambda) which complements this solution!
