@@ -1,10 +1,10 @@
 # 🔁 Log Generator Lambda
 
-Lambda simples responsável por simular a geração de logs e enviá-los para o **AWS CloudWatch Logs**. Esses logs são consumidos por outra função (`log-indexer-lambda`) para indexação no **OpenSearch**.
+A simple Lambda function responsible for simulating log generation and sending them to **AWS CloudWatch Logs**. These logs are consumed by another function (`log-indexer-lambda`) for indexing into **OpenSearch**.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
 - **AWS Lambda** (Node.js 22)
 - **AWS CloudWatch Logs**
@@ -13,18 +13,18 @@ Lambda simples responsável por simular a geração de logs e enviá-los para o 
 
 ---
 
-## 📌 O que este projeto faz?
+## 📌 What does this project do?
 
-Este projeto simula a geração de eventos de log, tanto para testes locais quanto em ambiente real. É especialmente útil em pipelines de observabilidade, permitindo validar integrações com ferramentas como o **OpenSearch**.
+This project simulates log event generation, both for local tests and real environments. It’s especially useful in observability pipelines, allowing validation of integrations with tools like **OpenSearch**.
 
 ---
 
-## 🧱 Estrutura do Projeto
+## 🧱 Project Structure
 
 ```
 ├── src/
-│   └── handler.ts             # Função Lambda que gera logs aleatórios
-├── serverless.yml             # Configuração da função e permissões
+│   └── handler.ts             # Lambda function that generates random logs
+├── serverless.yml             # Function configuration and permissions
 ├── package.json
 └── tsconfig.build.json
 ```
@@ -33,7 +33,7 @@ Este projeto simula a geração de eventos de log, tanto para testes locais quan
 
 ## 📦 Deploy
 
-Instale as dependências, compile e realize o deploy:
+Install dependencies, compile, and deploy:
 
 ```bash
 npm install
@@ -43,9 +43,9 @@ npm run deploy
 
 ---
 
-## 🔁 Como usar
+## 🔁 How to use
 
-Para gerar um lote de logs manualmente:
+To manually trigger a batch of logs:
 
 ```bash
 aws lambda invoke \
@@ -54,22 +54,22 @@ aws lambda invoke \
   response.json
 ```
 
-Os logs gerados serão enviados automaticamente para o grupo de logs da AWS:
+The generated logs will automatically be sent to the AWS logs group:
 
 ```
 /aws/lambda/log-generator-lambda-dev-generateLogs
 ```
 
-Esses logs serão consumidos pela função `log-indexer-lambda`.
+These logs will be consumed by the `log-indexer-lambda` function.
 
 ---
 
-## 🧠 Aprendizados
+## 🧠 Learnings
 
-- Geração de eventos simulados com foco em **observabilidade**
-- Trigger de logs para consumo **assíncrono via Lambda**
-- Integração simples e eficaz com **CloudWatch Logs**
+- Simulated event generation focused on **observability**
+- Asynchronous log triggering via **Lambda**
+- Simple and effective integration with **CloudWatch Logs**
 
 ---
 
-Curtiu o projeto? Confira também o [`log-indexer-lambda`](https://github.com/seu-usuario/log-indexer-lambda) que complementa essa solução!
+Enjoyed this project? Check out the [`log-indexer-lambda`](https://github.com/seu-usuario/log-indexer-lambda) which complements this solution!
